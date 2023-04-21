@@ -23,14 +23,15 @@ export default function MealDetailScreen({ route, navigation }) {
   const mealIsFavorite = favoriteMealIds.includes(mealId);
 
   const onPressHandler = ()=>{
-    // console.log('Pressed!')
+    console.log('Fav Meals', favoriteMealIds);
+    console.log(mealId)
     if(mealIsFavorite){
       // favoriteMealContext.removeFavorite(mealId)
-      dispatch( addFavorite(mealId ))
+      dispatch( removeFavorite({id :mealId}))
     }
     else 
       // favoriteMealContext.addFavorite(mealId);
-      dispatch( removeFavorite({id :mealId}))
+      dispatch( addFavorite({ id :mealId} ))
   };
 
   //setting header button from component Screen

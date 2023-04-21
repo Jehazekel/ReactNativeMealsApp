@@ -10,9 +10,9 @@ export default function FavoritesScreen( ){
 
   // const favoriteMealsCtx = useContext(FavoriteContext);
   // const favoriteMeals = MEALS.filter( meal => favoriteMealsCtx.ids.includes(meal.id) )
-  
   const favoriteMealsList = useSelector( state => state.favoriteMeals.ids);
-  const favoriteMeals = MEALS.filter( meal => favoriteMealsList.ids.includes(meal.id) )
+  const favoriteMeals = MEALS?.filter( meal => favoriteMealsList?.includes(meal.id) )
+  
   
   if( favoriteMeals?.length === 0 ){
     return (
